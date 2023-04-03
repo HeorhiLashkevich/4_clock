@@ -55,18 +55,20 @@ class AnalogClockView @JvmOverloads constructor(
 
     private fun check() {
         second++
-        if (hour > 12) {
-            hour = 1.0
-        }
-
-        if (minute > 60) {
-            hour += 1
-            minute = 1
-        }
         if (second > 60) {
             minute += 1
             second = 1
         }
+        if (minute > 60) {
+            hour += 1
+            minute = 1
+        }
+        if (hour > 12) {
+            hour = 1.0
+        }
+
+
+
     }
 
     private fun drawHands(canvas: Canvas?) {

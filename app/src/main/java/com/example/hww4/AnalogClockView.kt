@@ -58,13 +58,14 @@ class AnalogClockView @JvmOverloads constructor(
         if (hour > 12) {
             hour = 1.0
         }
-        if (second > 60) {
-            minute += 1
-            second = 1
-        }
+
         if (minute > 60) {
             hour += 1
             minute = 1
+        }
+        if (second > 60) {
+            minute += 1
+            second = 1
         }
     }
 

@@ -73,9 +73,11 @@ class AnalogClockView @JvmOverloads constructor(
 
     private fun drawHands(canvas: Canvas?) {
         Thread.sleep(1000)
-        hourHand(canvas, hour, minute)
-        minuteHand(canvas, minute, second)
+
+
         secondHand(canvas, second)
+        minuteHand(canvas, minute, second)
+        hourHand(canvas, hour, minute)
     }
 
     private fun drawNumeral(canvas: Canvas?) {
